@@ -1,16 +1,4 @@
-# template_repo
-
-## Template Instructions
-
-Use this template by clicking the green `Use this template` button above to create a new repository.
-
-Couple of things to keep in mind:
-- Make sure to set the owner to the `DataPoint-Armenia` org when creating.
-- Name your repo in the format `<project_name>_<repo_name>`
-  - For example: **vortan_spellchecker**.
-  - This helps keep things organized when you have many repos for one project.
-- This template is just a guideline. Feel free to change things up to suit your own needs.
-  - I would start by deleting this "Template Instructions" section and filling in the other sections as the project develops.
+# vortan_testing
 
 ## About
 
