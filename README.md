@@ -10,7 +10,7 @@ Provides a suit of tests that measure performance in different scenarios.
 
 - **Technical Spec**: [link](https://docs.google.com/document/d/174XceYg-MSX32kfEz-C4bQx8zk43uHebvGSBaEduQWM/edit)
 - **Google Drive Folder**: [link](https://drive.google.com/drive/folders/1f1feyB_po6hS7TFvdvPWZ3Q6dSEDjklQ)
-- **Slack Channel**: #vortan
+- **Slack Channel**: [#vortan](https://datapointarmenia.slack.com/archives/C01LE2ADLFJ)
 
 ## Getting Started
 
