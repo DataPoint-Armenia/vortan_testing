@@ -2,60 +2,45 @@
 
 ## About
 
-_Description of your project._
+A program for testing the precision, accuracy and speed of Armenian spellcheckers.
+Provides a suit of tests that measure performance in different scenarios.
 
 ## Documentation
 
-_A list of links to external documentation for your project_
 
-- **Project Spec**: [link](google.com)
-- **Technical Spec**: [link](google.com)
-- **Google Drive Folder**: [link](google.com)
-- **Slack Channel**: #template
+- **Technical Spec**: [link](https://docs.google.com/document/d/174XceYg-MSX32kfEz-C4bQx8zk43uHebvGSBaEduQWM/edit)
+- **Google Drive Folder**: [link](https://drive.google.com/drive/folders/1f1feyB_po6hS7TFvdvPWZ3Q6dSEDjklQ)
+- **Slack Channel**: #vortan
 
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
 
-### How to Guide
+### Prereqs
 
-This is an example of how to list things you need to use the software and how to install them.
-
-
-- [npm](https://www.npmjs.com/)
-
-```
-npm install npm@latest -g
-```
+- [python3](https://www.python.org/downloads/)
+- [pip](https://pypi.org/project/pip/)
 
 ### Installation
 
-1. Get a free API Key at https://example.com
-2. Clone the repo
+1. Clone the repo
 ```
-git clone https://github.com/your_username_/Project-Name.git
+git clone git@github.com:DataPoint-Armenia/vortan_testing.git
 ```
-3. Install NPM packages
+2. Install requirements
 ```
-npm install
-```
-4. Enter your API in config.js
-```
-const API_KEY = 'ENTER YOUR API';
+pip install -r requirements.txt
 ```
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+```
+python3 .\src\test.py run
+```
 
 ## Contributors
 
-- @poghos
-- @petros
-- @bardoghimyos
+- [@sourenp](https://github.com/sourenp)
 
-## Achnowledgements
+## Acknowledgements
 
-List all the resources you used such as papers, other repos, tutorials, etc
-
-- [othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template)
