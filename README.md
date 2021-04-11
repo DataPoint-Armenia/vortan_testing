@@ -48,8 +48,6 @@ python3 ./src/test.py run ./tests/ reformed_orth/rubina.wrong reformed_orth/rubi
 
 ### Syntesize test
 
-Synthesize test
-
 ```
 # format
 synthesize_test.py generate FILENAME MODE
