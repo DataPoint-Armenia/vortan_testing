@@ -10,12 +10,6 @@ from typing import Dict
 import subprocess
 import time
 
-# TODO(sourencho): Convert these into commad line arguments
-IN_FILE = "reformed_orth/rubina.wrong"
-EXPECTED_FILE = "reformed_orth/rubina.sug"
-SPELLCHECK_CMD = r"node /Users/peco/Documents/code/vortan/vortspell/index.js suggest"
-TESTS_DIR = "./tests/"
-
 
 @click.group()
 def cli() -> None:
