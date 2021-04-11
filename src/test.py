@@ -13,7 +13,7 @@ import time
 # TODO(sourencho): Convert these into commad line arguments
 IN_FILE = "reformed_orth/rubina.wrong"
 EXPECTED_FILE = "reformed_orth/rubina.sug"
-SPELLCHECK_CMD = r"C:/Users/souren/AppData/Local/Microsoft/WindowsApps/python3.exe C:/Users/souren/Documents/code/vortan_testing/src/dummy_spellcheck.py"
+SPELLCHECK_CMD = r"node /Users/peco/Documents/code/vortan/vortspell/index.js suggest"
 TESTS_DIR = "./tests/"
 
 
@@ -24,13 +24,16 @@ def cli() -> None:
 
 # run: todo docs
 @click.command()
-def run() -> None:
+@click.argument('test_dir', type=str)
+@click.argument('wrong_file', type=str)
+@click.argument('sug_file', type=str)
+@click.argument('cmd', type=str)
+def run(test_dir, wrong_file, sug_file, cmd) -> None:
     # setup
-    wrg_file, sug_file = _get_test_file_pair(TESTS_DIR, IN_FILE, EXPECTED_FILE)
-    spellcheck_cmd = SPELLCHECK_CMD
+    wrg_file, sug_file = _get_test_file_pair(test_dir, wrong_file, sug_file)
 
     # test
-    test_results = test(wrg_file, sug_file, spellcheck_cmd)
+    test_results = test(wrg_file, sug_file, cmd)
 
     # show results
     print(test_results)
@@ -60,8 +63,9 @@ def _spellcheck(spellcheck_cmd, sug_word, wrg_word) -> bool:
     proc = subprocess.Popen(
         spellcheck_cmd.split() + [wrg_word],
         stdout=subprocess.PIPE,
-        shell=True)
-    raw_result = proc.communicate()[0]
+    )
+    communicate = proc.communicate()
+    raw_result = communicate[0]
 
     result = raw_result.decode().strip()
 
