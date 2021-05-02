@@ -43,7 +43,7 @@ pip install -r requirements.txt
 test.py run TEST_DIR WRONG_FILE SUG_FILE CMD
 
 # for example
-python3 ./src/test.py run ./tests/ reformed_orth/rubina.wrong reformed_orth/rubina.sug "node spellcheck.js suggest"
+python3 ./src/test.py run ./tests/ reformed_orth/rubina.wrong reformed_orth/rubina.sug "bash util/get_suggestion.sh"
 ```
 
 ### Syntesize test
