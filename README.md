@@ -42,8 +42,11 @@ pip install -r requirements.txt
 # format
 test.py run TEST_DIR WRONG_FILE SUG_FILE CMD
 
-# for example
-python3 ./src/test.py run ./tests/ reformed_orth/rubina.wrong reformed_orth/rubina.sug "bash util/get_suggestion.sh"
+# Example that tests a spellchecker running on localhost
+python3 ./src/test.py run ./tests/ reformed_orth/rubina.wrong reformed_orth/rubina.sug "bash util/get_sug_json.sh"
+
+# Example that tests vortan_hyspell
+python3 ./src/test.py run ./tests/ reformed_orth/rubina.wrong reformed_orth/rubina.sug "node path/vortan_hyspell/index.js correct"
 ```
 
 ### Syntesize test

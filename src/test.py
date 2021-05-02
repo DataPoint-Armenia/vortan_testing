@@ -9,6 +9,7 @@ from typing import Tuple
 from typing import Dict
 import subprocess
 import time
+import json
 
 
 @click.group()
@@ -61,13 +62,13 @@ def _spellcheck(spellcheck_cmd, sug_word, wrg_word) -> bool:
     communicate = proc.communicate()
     raw_result = communicate[0]
 
-    result = raw_result.decode().strip()
+    suggestions = json.loads(raw_result.decode('utf8'))['suggestions']
 
-    success = result == sug_word
+    success = sug_word in suggestions
 
     # TODO(sourencho): print this in a nice format in verbose mode
     print(
-        f"in: '{wrg_word}', exp: '{sug_word}, out: '{result}', match: {success}")
+        f"in: '{wrg_word}', exp: '{sug_word}, out: '{suggestions}', match: {success}")
 
     return success
 
