@@ -2,7 +2,8 @@
 
 ## About
 
-A program for testing the precision, accuracy and speed of Armenian spellcheckers.
+Testing framework for precision, accuracy and speed of Armenian spellcheckers.
+
 Provides a suit of tests that measure performance in different scenarios.
 
 ## Documentation
