@@ -69,6 +69,6 @@ Supported modes:
 
 ## Contributors
 
--   [@sourenp](https://github.com/sourenp)
+-   [@sourencho](https://github.com/sourencho)
 
 ## Acknowledgements
