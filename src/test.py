@@ -68,7 +68,7 @@ def _spellcheck(spellcheck_cmd, sug_word, wrg_word) -> bool:
 
     # TODO(sourencho): print this in a nice format in verbose mode
     print(
-        f"in: '{wrg_word}', exp: '{sug_word}, out: '{suggestions}', match: {success}")
+        f"in: '{wrg_word}', exp: '{sug_word}', out: '{suggestions}', match: {success}")
 
     return success
 
