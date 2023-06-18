@@ -36,7 +36,8 @@ def run(test_dir, wrong_file, sug_file, cmd) -> None:
 
 # test: todo docs
 def test(wrg_file, sug_file, spellcheck_cmd) -> Dict:
-    n, bad, start_time = 0, 0, time.process_time()
+    n, bad = 0, 0
+    time_start = time.time()
 
     for sug_word, wrg_word in zip(sug_file, wrg_file):
         # words
@@ -50,7 +51,9 @@ def test(wrg_file, sug_file, spellcheck_cmd) -> Dict:
         n += 1
         bad += not success
 
-    return dict(bad=bad, n=n, perc=float(100. - 100.*bad/n), elapsed=time.process_time()-start_time)
+    time_end = time.time()
+
+    return dict(bad=bad, n=n, perc=float(100. - 100.*bad/n), elapsed=time_end-time_start)
 
 
 # Returns true if spellcheck was correct
@@ -67,8 +70,7 @@ def _spellcheck(spellcheck_cmd, sug_word, wrg_word) -> bool:
     success = sug_word in suggestions
 
     # TODO(sourencho): print this in a nice format in verbose mode
-    print(
-        f"in: '{wrg_word}', exp: '{sug_word}', out: '{suggestions}', match: {success}")
+    print(f"in: '{wrg_word}', exp: '{sug_word}', out: '{suggestions}', match: {success}")
 
     return success
 
